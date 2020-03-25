@@ -34,13 +34,13 @@ MobileNetV1: ```python main.py --config configs/largescale/mobilenetv1-str.yaml 
 
 To reproduce the results in the [paper](https://arxiv.org/abs/2002.03231), please modify the `config` files appropriately using the hyperparameters from the appendix of STR paper.
 
-### Train ResNet50 models [DNW](https://arxiv.org/abs/1906.00586) and [GMP](https://arxiv.org/abs/1710.01878) on ImageNet-1K:
+### Train ResNet50 models with [DNW](https://arxiv.org/abs/1906.00586) and [GMP](https://arxiv.org/abs/1710.01878) on ImageNet-1K:
 
 DNW: ```python main.py --config configs/largescale/resnet50-dnw.yaml --multigpu 0,1,2,3```
 
 GMP: ```python main.py --config configs/largescale/resnet50-gmp.yaml --multigpu 0,1,2,3```
 
-Please note that **GMP** implementation is not experimented exhaustively, so caution advised. 
+Please note that **GMP** implementation is not thoroughly tested, so caution is advised. 
 
 Modify the `config` files to tweak the performance and sparsity levels in both DNW and GMP. 
 
@@ -49,7 +49,7 @@ STR models are not compatible with the traditional dense models for simple evalu
 
 Every experiment creates a directory inside `runs` folder (which will be created automatically) along with the tensorboard logs, initial model state (for LTH experiments) and best model (`model_best.pth`).
 
-The `runs` folder also has dumps of the csv with final and best accuracies along with layer-wise sparsity distributions and threhsolds in case of STR. 
+The `runs` folder also has dumps of the csv with final and best accuracies along with layer-wise sparsity distributions and threhsolds in case of STR. The code checkpoints after every epoch giving a chance to resume training when pre-empted, the extra functionalities can be explored through ```python main.py -h```. 
 
 ### Convert STR model to dense model:
 

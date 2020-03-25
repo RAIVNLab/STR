@@ -1,3 +1,4 @@
+# config to get 90% sparse ResNet50 on ImageNet. Modify this file to get other sparse models.
 # Architecture
 arch: ResNet50
 
