@@ -70,7 +70,7 @@ Dense Model Evaluation: ```python main.py --config configs/largescale/<arch>-den
 STR Model Evaluation: ```python main.py --config configs/largescale/<arch>-str.yaml --multigpu 0,1,2,3 --pretrained <STR-Model> --evaluate```
 
 ## Sparsity Budget Transfer
-If it is hard to hand-code all the budgets into a method like DNW, you can use the budget transfer functionalities of the repo. 
+If it is hard to hand-code all the budgets into a method like DNW, you can use the budget transfer functionalities of the repo. The pretrained models provided have to be in the native STR model format and not in coverted/compatible Dense model format. You should change [this piece](main.py#L313) of code to support Dense format as well.
 
 Transfer to DNW: ```python main.py --config configs/largescale/<arch>-dnw.yaml --multigpu 0,1,2,3 --pretrained <STR-Model> --ignore-pretrained-weights --use-budget```
 
@@ -92,7 +92,7 @@ These models are straight-forward to train using this repo and there are pre-exi
 
 ### STR Sparse Models:
 
-We are providing links to 6 models for ResNet50 and 2 models for MobileNetV1. These models represent the sparsity regime they belong to. Please contact [Aditya Kusupati](https://homes.cs.washington.edu/~kusupati/) in case you need a specific model and are not able to train it from scratch. All the sparsity budgets for every model in the [paper](https://arxiv.org/abs/2002.03231) are present in the appendix, in case all you need is the non-uniform sparsity budget.
+We are providing links to 6 models for ResNet50 and 2 models for MobileNetV1. These models represent the sparsity regime they belong to. Each model has two versions of model links to download, the first one is the vanilla STR model and the second one is the STR model converted to be compatible with Dense models and for tranfer learning. Please contact [Aditya Kusupati](https://homes.cs.washington.edu/~kusupati/) in case you need a specific model and are not able to train it from scratch. All the sparsity budgets for every model in the [paper](https://arxiv.org/abs/2002.03231) are present in the appendix, in case all you need is the non-uniform sparsity budget.
 
 #### ResNet50:
 | No. | Params | Sparsity (%) | Top-1 Acc (%) | FLOPs | Model Links |
