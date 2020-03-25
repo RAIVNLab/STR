@@ -1,9 +1,9 @@
-# config to get 90.23% sparse ResNet50 on ImageNet.
+# config to get 90.23% sparse ResNet50 on ImageNet. Modify this file to get other sparse models.
 # Architecture
 arch: ResNet50
 
 # ===== Dataset ===== #
-data: /home/kusupati/data/
+data: /mnt/data/
 set: ImageNet
 name: STR_90.23
 

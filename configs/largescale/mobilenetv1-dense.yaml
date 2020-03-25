@@ -2,7 +2,7 @@
 arch: MobileNetV1
 
 # ===== Dataset ===== #
-data: /home/kusupati/data/
+data: /mnt/data/
 set: ImageNet
 name: baseline
 

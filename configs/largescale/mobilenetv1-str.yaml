@@ -1,11 +1,11 @@
-# config to get 89.01% sparse MobileNetV1 on ImageNet.
+# config to get 89.01% sparse MobileNetV1 on ImageNet. Modify this file to get other sparse models.
 # Architecture
 arch: MobileNetV1
 
 # ===== Dataset ===== #
-data: /home/kusupati/data/
+data: /mnt/data/
 set: ImageNet
-name: MobileNetV1_89
+name: MobileNetV1_89.01
 
 # ===== Learning Rate Policy ======== #
 optimizer: sgd

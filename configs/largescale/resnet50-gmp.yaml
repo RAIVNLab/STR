@@ -1,8 +1,10 @@
+# config to get 90% sparse ResNet50 on ImageNet. Modify this file to get other sparse models.
+# Note that this is not well tested.
 # Architecture
 arch: ResNet50
 
 # ===== Dataset ===== #
-data: /home/kusupati/data/
+data: /mnt/data/
 set: ImageNet
 name: GMP_90
 

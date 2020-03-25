@@ -2,7 +2,7 @@
 arch: ResNet50
 
 # ===== Dataset ===== #
-data: /home/kusupati/data/
+data: /mnt/data/
 set: ImageNet
 name: DNW_90
 
