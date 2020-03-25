@@ -1,0 +1,35 @@
+# Architecture
+arch: ResNet50
+
+# ===== Dataset ===== #
+data: /home/kusupati/data/
+set: ImageNet
+name: GMP_90
+
+# ===== Learning Rate Policy ======== #
+optimizer: sgd
+lr: 0.256
+lr_policy: cosine_lr
+warmup_length: 5
+
+# ===== Network training config ===== #
+epochs: 100
+weight_decay: 0.00003051757813 
+momentum: 0.875
+batch_size: 256
+label_smoothing: 0.1
+
+# ===== Sparsity =========== #
+conv_type: GMPConv
+bn_type: LearnedBatchNorm
+init: kaiming_normal
+prune_rate: 0.90
+mode: fan_in
+nonlinearity: relu
+
+# Play around with these hyperparams, they might not be the optimal
+init_prune_epoch: 20
+final_prune_epoch: 79
+
+# ===== Hardware setup ===== #
+workers: 20

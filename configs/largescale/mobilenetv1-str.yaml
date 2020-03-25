@@ -1,0 +1,33 @@
+# config to get 89.01% sparse MobileNetV1 on ImageNet.
+# Architecture
+arch: MobileNetV1
+
+# ===== Dataset ===== #
+data: /home/kusupati/data/
+set: ImageNet
+name: MobileNetV1_89
+
+# ===== Learning Rate Policy ======== #
+optimizer: sgd
+lr: 0.256
+lr_policy: cosine_lr
+warmup_length: 5
+
+# ===== Network training config ===== #
+epochs: 100
+weight_decay: 0.00003751757813 # Change this according to reported numbers in appendix
+momentum: 0.875
+batch_size: 256
+label_smoothing: 0.1
+
+# ===== Sparsity =========== #
+conv_type: STRConv
+bn_type: LearnedBatchNorm
+init: kaiming_normal
+mode: fan_in
+nonlinearity: relu
+sparse_function: sigmoid
+sInit_value: -12800 # Change this according to reported numbers in appendix
+
+# ===== Hardware setup ===== #
+workers: 20

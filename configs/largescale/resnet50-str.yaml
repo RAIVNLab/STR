@@ -1,0 +1,33 @@
+# config to get 90.23% sparse ResNet50 on ImageNet.
+# Architecture
+arch: ResNet50
+
+# ===== Dataset ===== #
+data: /home/kusupati/data/
+set: ImageNet
+name: STR_90.23
+
+# ===== Learning Rate Policy ======== #
+optimizer: sgd
+lr: 0.256
+lr_policy: cosine_lr
+warmup_length: 5
+
+# ===== Network training config ===== #
+epochs: 100
+weight_decay: 0.00002251757813 # Change this according to reported numbers in appendix
+momentum: 0.875
+batch_size: 256
+label_smoothing: 0.1
+
+# ===== Sparsity =========== #
+conv_type: STRConv
+bn_type: LearnedBatchNorm
+init: kaiming_normal
+mode: fan_in
+nonlinearity: relu
+sparse_function: sigmoid
+sInit_value: -3200 # Change this according to reported numbers in appendix
+
+# ===== Hardware setup ===== #
+workers: 20
