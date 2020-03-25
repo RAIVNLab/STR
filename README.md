@@ -1,10 +1,10 @@
 # [Soft Threshold Weight Reparameterization for Learnable Sparsity](https://arxiv.org/abs/2002.03231)
 
-This repository provides code for the CNN experiments performed in the [paper](https://arxiv.org/abs/2002.03231) along with more functionalities for wide usage.
+This repository contains code for the CNN experiments presented in the [paper](https://arxiv.org/abs/2002.03231) along with more functionalities.
 
 This code base is built upon the [hidden-networks repository](https://github.com/allenai/hidden-networks) modified for [STR](https://arxiv.org/abs/2002.03231), [DNW](https://arxiv.org/abs/1906.00586) and [GMP](https://arxiv.org/abs/1710.01878) experiments.
 
-The RNN experiments in the [paper](https://arxiv.org/abs/2002.03231) are done by modifying [`FastGRNNCell`](http://manikvarma.org/pubs/kusupati18.pdf) in [EdgeML](https://github.com/Microsoft/EdgeML) repository using the principles in the STR paper.
+The RNN experiments in the [paper](https://arxiv.org/abs/2002.03231) are done by modifying [`FastGRNNCell`](http://manikvarma.org/pubs/kusupati18.pdf) in [EdgeML](https://github.com/Microsoft/EdgeML) using the methods discussed in the paper.
 
 ## Set Up
 0. Clone this repository.
@@ -70,7 +70,7 @@ Dense Model Evaluation: ```python main.py --config configs/largescale/<arch>-den
 STR Model Evaluation: ```python main.py --config configs/largescale/<arch>-str.yaml --multigpu 0,1,2,3 --pretrained <STR-Model> --evaluate```
 
 ## Sparsity Budget Transfer
-If it is hard to hand-code all the budgets into a method like DNW, you can use the budget transfer functionalities of the repo. The pretrained models provided have to be in the native STR model format and not in coverted/compatible Dense model format. You should change [this piece](main.py#L313) of code to support Dense format as well.
+If it is hard to hand-code all the budgets into a method like DNW, you can use the budget transfer functionalities of the repo. The pretrained models provided have to be in the native STR model format and not in coverted/compatible Dense model format. You should change [this piece](main.py#L312) of code to support Dense format as well.
 
 Transfer to DNW: ```python main.py --config configs/largescale/<arch>-dnw.yaml --multigpu 0,1,2,3 --pretrained <STR-Model> --ignore-pretrained-weights --use-budget```
 
@@ -83,7 +83,7 @@ All the models provided here are trained on ImageNet-1K according to the setting
 
 ### Fully Dense Models:
 
-These models are straight-forward to train using this repo and there are pre-exisiting models in most of the popular frameworks for them.
+These models are straight-forward to train using this repo and thier pretrained models are in most of the popular frameworks.
 
 | Architecture | Params | Sparsity (%) | Top-1 Acc (%) | FLOPs |
 | ------------ | :----: | :----------: | :-----------: | :---: |
