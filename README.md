@@ -92,23 +92,23 @@ These models are straight-forward to train using this repo and there are pre-exi
 
 ### STR Sparse Models:
 
-We are providing links to 6 models for ResNet50 and 2 models for MobileNetV1. These models represent the sparsity regime they belong to. Please contact [Aditya Kusupati](https://homes.cs.washington.edu/~kusupati/) in case you need a specific model and are not able to train it from scratch. All the sparsity budgets for every model in the paper are present in the appendix, in case all you need is the non-uniform sparsity budget.
+We are providing links to 6 models for ResNet50 and 2 models for MobileNetV1. These models represent the sparsity regime they belong to. Please contact [Aditya Kusupati](https://homes.cs.washington.edu/~kusupati/) in case you need a specific model and are not able to train it from scratch. All the sparsity budgets for every model in the [paper](https://arxiv.org/abs/2002.03231) are present in the appendix, in case all you need is the non-uniform sparsity budget.
 
 #### ResNet50:
 | No. | Params | Sparsity (%) | Top-1 Acc (%) | FLOPs | Model Links |
 | --- | :----: | :----------: | :-----------: | ----: | :---------: |
-| 1   | 4.47M  | 81.27        | 76.12         | 705M  | [STR](), [Dense]() |
-| 2   | 2.49M  | 90.23        | 74.31         | 343M  | [STR](), [Dense]() |
-| 3   | 1.24M  | 95.15        | 70.23         | 162M  | [STR](), [Dense]() |
-| 4   | 0.88M  | 96.53        | 67.22         | 117M  | [STR](), [Dense]() |
+| 1   | 4.47M  | 81.27        | 76.12         | 705M  | [STR](https://drive.google.com/file/d/1ztb0UfsFVJQkE2vj6eNHxnab9MXuLryk/view?usp=sharing), [Dense]() |
+| 2   | 2.49M  | 90.23        | 74.31         | 343M  | [STR](https://drive.google.com/file/d/19Aw8ovR52sMN9FQrSnd78WLLXeGrG67z/view?usp=sharing), [Dense]() |
+| 3   | 1.24M  | 95.15        | 70.23         | 162M  | [STR](https://drive.google.com/file/d/1WTGNMQVQFBMigN8LH3NOc0QbWFnOMiPY/view?usp=sharing), [Dense]() |
+| 4   | 0.88M  | 96.53        | 67.22         | 117M  | [STR](https://drive.google.com/file/d/1wgdbeZgWWTN6baQvvmiwDf-6LVs8G7fH/view?usp=sharing), [Dense]() |
 | 5   | 0.50M  | 98.05        | 61.46         | 73M   | [STR](), [Dense]() |
 | 6   | 0.26M  | 98.98        | 51.82         | 47M   | [STR](), [Dense]() |
 
 #### MobileNetV1  :
 | No. | Params | Sparsity (%) | Top-1 Acc (%) | FLOPs | Model Links |
 | --- | :----: | :----------: | :-----------: | ----: | :---------: |
-| 1   | 1.04M  | 75.28        | 68.35         | 101M  | [STR](), [Dense]() |
-| 2   | 0.46M  | 89.01        | 62.10         | 42M  | [STR](), [Dense]() |
+| 1   | 1.04M  | 75.28        | 68.35         | 101M  | [STR](https://drive.google.com/file/d/1XgBvMN2AzIoGSEYMfpoudHH3cLee-q-x/view?usp=sharing), [Dense](https://drive.google.com/file/d/19LWzHdUMpE5gm7tW9lIDs-T7rA3mcqFh/view?usp=sharing) |
+| 2   | 0.46M  | 89.01        | 62.10         | 42M  | [STR](https://drive.google.com/file/d/1_mNcVZTJB6LMfv5XrFUs2pWFMu9JQvG8/view?usp=sharing), [Dense](https://drive.google.com/file/d/1-PYY_uc-diqnfhMbZJNTYgqe95ouX7fp/view?usp=sharing) |
 
 ## Citation
 
