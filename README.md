@@ -13,12 +13,12 @@ To run the ImageNet experiments there must be a folder `<data-dir>/imagenet`
 that contains the ImageNet `train` and `val`.
 
 ## STRConv
-[`STRConv`](utils/conv_type.py#Line22) along with other custom convolution modules can be found in `utils/conv_type.py`. Users can take `STRConv` and use it in most of the PyTorch based models as it inherits from `nn.Conv2d` or also mentioned here as `DenseConv`.
+[`STRConv`](utils/conv_type.py#L22) along with other custom convolution modules can be found in (`utils/conv_type.py`)[utils/conv_type.py]. Users can take `STRConv` and use it in most of the PyTorch based models as it inherits from `nn.Conv2d` or also mentioned here as [`DenseConv`](utils/conv_type.py#L12).
 
 ## Vanilla Training
-This codebase contains model architectures for [ResNet18, ResNet50](models/resnet.py) and [MobileNetV1](models/mobilenetv1.py) and support to train them on ImageNet-1K.
+This codebase contains model architectures for [ResNet18](models/resnet.py#L156), [ResNet50](models/resnet.py#L161) and [MobileNetV1](models/mobilenetv1.py) and support to train them on ImageNet-1K. We have provided some `config` files for training [ResNet50](models/resnet.py#L161) and [MobileNetV1](models/mobilenetv1.py) which can be modified for other architectures and datasets. To support more datasets, please add new dataloaders to [`data`](data\) folder.
 
-Training across multiple GPUs is supported, however, the user should check the minimum number of GPUs required to scale ImageNet-1K.
+Training across multiple GPUs is supported, however, the user should check the minimum number of GPUs required to scale ImageNet-1K. 
 
 ### Train dense models on ImageNet-1K:
 
@@ -67,7 +67,7 @@ Dense Model Evaluation: ```python main.py --config configs/largescale/<arch>-den
 
 STR Model Evaluation: ```python main.py --config configs/largescale/<arch>-str.yaml --multigpu 0,1,2,3 --pretrained <STR-Model> --evaluate```
 
-## Budget Transfer
+## Sparsity Budget Transfer
 If it is hard to hand-code all the budgets into a method like DNW, you can use the budget transfer functionalities of the repo. 
 
 Transfer to DNW: ```python main.py --config configs/largescale/<arch>-dnw.yaml --multigpu 0,1,2,3 --pretrained <STR-Model> --ignore-pretrained-weights --use-budget```
