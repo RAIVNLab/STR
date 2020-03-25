@@ -63,7 +63,7 @@ These models use the names provided in the corresponding `config` files being us
 
 ### Evaluating models on ImageNet-1K:
 
-If you want to evaluate a pretrained STR model provided below, you can either use the model as is or convert it to a dense model and use the dense model evaluation. To encourage uniformity, please try to convert the STR models to dense or use the dense compatible models if provided.
+If you want to evaluate a [pretrained](#pretrained-models) STR model provided below, you can either use the model as is or convert it to a dense model and use the dense model evaluation. To encourage uniformity, please try to convert the STR models to dense or use the dense compatible models if provided.
 
 Dense Model Evaluation: ```python main.py --config configs/largescale/<arch>-dense.yaml --multigpu 0,1,2,3 --pretrained <Dense-Compatible-Model> --evaluate```
 
