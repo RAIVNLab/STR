@@ -16,7 +16,7 @@ that contains the ImageNet `train` and `val`.
 [`STRConv`](utils/conv_type.py#L22) along with other custom convolution modules can be found in (`utils/conv_type.py`)[utils/conv_type.py]. Users can take `STRConv` and use it in most of the PyTorch based models as it inherits from `nn.Conv2d` or also mentioned here as [`DenseConv`](utils/conv_type.py#L12).
 
 ## Vanilla Training
-This codebase contains model architectures for [ResNet18](models/resnet.py#L156), [ResNet50](models/resnet.py#L161) and [MobileNetV1](models/mobilenetv1.py) and support to train them on ImageNet-1K. We have provided some `config` files for training [ResNet50](models/resnet.py#L161) and [MobileNetV1](models/mobilenetv1.py) which can be modified for other architectures and datasets. To support more datasets, please add new dataloaders to [`data`](data\) folder.
+This codebase contains model architectures for [ResNet18](models/resnet.py#L156), [ResNet50](models/resnet.py#L161) and [MobileNetV1](models/mobilenetv1.py) and support to train them on ImageNet-1K. We have provided some `config` files for training [ResNet50](models/resnet.py#L161) and [MobileNetV1](models/mobilenetv1.py) which can be modified for other architectures and datasets. To support more datasets, please add new dataloaders to [`data`](data/) folder.
 
 Training across multiple GPUs is supported, however, the user should check the minimum number of GPUs required to scale ImageNet-1K. 
 
