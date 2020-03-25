@@ -1,8 +1,10 @@
 # [Soft Threshold Weight Reparameterization for Learnable Sparsity](https://arxiv.org/abs/2002.03231)
 
-This repository provides code for the experiments performed in the [paper](https://arxiv.org/abs/2002.03231) along with more functionalities for wide usage.
+This repository provides code for the CNN experiments performed in the [paper](https://arxiv.org/abs/2002.03231) along with more functionalities for wide usage.
 
 This code base is built upon the [hidden-networks repository](https://github.com/allenai/hidden-networks) modified for [STR](https://arxiv.org/abs/2002.03231), [DNW](https://arxiv.org/abs/1906.00586) and [GMP](https://arxiv.org/abs/1710.01878) experiments.
+
+The RNN experiments in the [paper](https://arxiv.org/abs/2002.03231) are done by modifying [`FastGRNNCell`](http://manikvarma.org/pubs/kusupati18.pdf) in [EdgeML](https://github.com/Microsoft/EdgeML) repository using the principles in the STR paper.
 
 ## Set Up
 0. Clone this repository.
@@ -77,8 +79,38 @@ Transfer to GMP: ```python main.py --config configs/largescale/<arch>-gmp.yaml -
 You should modify the corresponding `config` files for DNW and GMP to increase accuracy by changing the hyperparameters.
 
 ## Pretrained Models
+All the models provided here are trained on ImageNet-1K according to the settings in the [paper](https://arxiv.org/abs/2002.03231). 
 
-## Citing
+### Fully Dense Models:
+
+These models are straight-forward to train using this repo and there are pre-exisiting models in most of the popular frameworks for them.
+
+| Architecture | Params | Sparsity (%) | Top-1 Acc (%) | FLOPs |
+| ------------ | :----: | :----------: | :-----------: | :---: |
+| ResNet50     | 25.6M  | 0.00         | 77.00         | 4.09G |
+| MobileNetV1  | 4.21M  | 0.00         | 70.60         | 569M  |
+
+### STR Sparse Models:
+
+We are providing links to 6 models for ResNet50 and 2 models for MobileNetV1. These models represent the sparsity regime they belong to. Please contact [Aditya Kusupati](https://homes.cs.washington.edu/~kusupati/) in case you need a specific model and are not able to train it from scratch. All the sparsity budgets for every model in the paper are present in the appendix, in case all you need is the non-uniform sparsity budget.
+
+#### ResNet50:
+| No. | Params | Sparsity (%) | Top-1 Acc (%) | FLOPs | Model Links |
+| --- | :----: | :----------: | :-----------: | ----: | :---------: |
+| 1   | 4.47M  | 81.27        | 76.12         | 705M  | [STR](), [Dense]() |
+| 2   | 2.49M  | 90.23        | 74.31         | 343M  | [STR](), [Dense]() |
+| 3   | 1.24M  | 95.15        | 70.23         | 162M  | [STR](), [Dense]() |
+| 4   | 0.88M  | 96.53        | 67.22         | 117M  | [STR](), [Dense]() |
+| 5   | 0.50M  | 98.05        | 61.46         | 73M   | [STR](), [Dense]() |
+| 6   | 0.26M  | 98.98        | 51.82         | 47M   | [STR](), [Dense]() |
+
+#### MobileNetV1  :
+| No. | Params | Sparsity (%) | Top-1 Acc (%) | FLOPs | Model Links |
+| --- | :----: | :----------: | :-----------: | ----: | :---------: |
+| 1   | 1.04M  | 75.28        | 68.35         | 101M  | [STR](), [Dense]() |
+| 2   | 0.46M  | 89.01        | 62.10         | 42M  | [STR](), [Dense]() |
+
+## Citation
 
 If you find this project useful in your research, please consider citing:
 
