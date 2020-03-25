@@ -32,16 +32,17 @@ class STRConv(nn.Conv2d):
             self.sparseThreshold = nn.Parameter(initialize_sInit())
     
     def forward(self, x):
-        
-        self.sparseWeight = sparseFunction(self.weight, self.sparseThreshold, self.activation, self.f)
+        # In case STR is not training for the hyperparameters given in the paper, change sparseWeight to self.sparseWeight if it is a problem of backprop.
+        # However, that should not be the case according to graph computation.
+        sparseWeight = sparseFunction(self.weight, self.sparseThreshold, self.activation, self.f)
         x = F.conv2d(
-            x, self.sparseWeight, self.bias, self.stride, self.padding, self.dilation, self.groups
+            x, sparseWeight, self.bias, self.stride, self.padding, self.dilation, self.groups
         )
         return x
 
     def getSparsity(self, f=torch.sigmoid):
-        self.sparseWeight = sparseFunction(self.weight, self.sparseThreshold,  self.activation, self.f)
-        temp = self.sparseWeight.detach().cpu()
+        sparseWeight = sparseFunction(self.weight, self.sparseThreshold,  self.activation, self.f)
+        temp = sparseWeight.detach().cpu()
         temp[temp!=0] = 1
         return temp.mean().item()*100, temp.numel(), f(self.sparseThreshold).item()
 

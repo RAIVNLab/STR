@@ -110,6 +110,8 @@ We are providing links to 6 models for ResNet50 and 2 models for MobileNetV1. Th
 | 1   | 1.04M  | 75.28        | 68.35         | 101M  | [STR](https://drive.google.com/file/d/1XgBvMN2AzIoGSEYMfpoudHH3cLee-q-x/view?usp=sharing), [Dense](https://drive.google.com/file/d/19LWzHdUMpE5gm7tW9lIDs-T7rA3mcqFh/view?usp=sharing) |
 | 2   | 0.46M  | 89.01        | 62.10         | 42M  | [STR](https://drive.google.com/file/d/1_mNcVZTJB6LMfv5XrFUs2pWFMu9JQvG8/view?usp=sharing), [Dense](https://drive.google.com/file/d/1-PYY_uc-diqnfhMbZJNTYgqe95ouX7fp/view?usp=sharing) |
 
+Note: If you find any STR model to be 2x the size of its Dense compatible model, it might be becuase of an old implementation that might have resulted in a model which replcated the weights.
+
 ## Citation
 
 If you find this project useful in your research, please consider citing:

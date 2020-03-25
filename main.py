@@ -201,8 +201,6 @@ def main_worker(args):
                     sparsity, total_params, thresh = m.getSparsity()
                     writer.add_scalar("sparsity/{}".format(n), sparsity, epoch)
                     writer.add_scalar("thresh/{}".format(n), thresh, epoch)
-                    writer.add_histogram("sparseweight/{}".format(n), m.sparseWeight, epoch)
-                    writer.add_histogram("weight/{}".format(n), m.weight, epoch)
                     sum_sparse += int((sparsity / 100) * total_params)
                     count += total_params
             total_sparsity = 100 * sum_sparse / count
@@ -300,11 +298,12 @@ def pretrained(args, model):
                 if (k in model_state_dict and v.size() == model_state_dict[k].size())
             }
 
-            for k, v in pretrained.items():
-                if 'sparseThreshold' in k:
-                    wkey = k.split('sparse')[0] + 'weight'
-                    weight = pretrained[wkey]
-                    pretrained_final[wkey] = sparseFunction(weight, v)
+            if args.conv_type != "STRConv":
+                for k, v in pretrained.items():
+                    if 'sparseThreshold' in k:
+                        wkey = k.split('sparse')[0] + 'weight'
+                        weight = pretrained[wkey]
+                        pretrained_final[wkey] = sparseFunction(weight, v)
 
             model_state_dict.update(pretrained_final)
             model.load_state_dict(model_state_dict)
