@@ -51,7 +51,7 @@ STR models are not compatible with the traditional dense models for simple evalu
 
 Every experiment creates a directory inside `runs` folder (which will be created automatically) along with the tensorboard logs, initial model state (for LTH experiments) and best model (`model_best.pth`).
 
-The `runs` folder also has dumps of the csv with final and best accuracies along with layer-wise sparsity distributions and threhsolds in case of STR. The code checkpoints after every epoch giving a chance to resume training when pre-empted, the extra functionalities can be explored through ```python main.py -h```. 
+The `runs` folder also has dumps of the csv with final and best accuracies along with layer-wise sparsity distributions and thresholds in case of STR. The code checkpoints after every epoch giving a chance to resume training when pre-empted, the extra functionalities can be explored through ```python main.py -h```. 
 
 ### Convert STR model to dense model:
 
@@ -59,7 +59,7 @@ ResNet50: ```python main.py --config configs/largescale/resnet50-dense.yaml --mu
 
 MobileNetV1: ```python main.py --config configs/largescale/mobilenetv1-dense.yaml --multigpu 0,1,2,3 --pretrained <MobileNetV1-STR-Model> --dense-conv-model```
 
-These models use the names provided in the corresponding `config` files being used but can also be modified using `--name` argument in command line.
+These models use the names provided in the corresponding `config` files being used but can also be modified using `--name` argument in the command line.
 
 ### Evaluating models on ImageNet-1K:
 
@@ -70,7 +70,7 @@ Dense Model Evaluation: ```python main.py --config configs/largescale/<arch>-den
 STR Model Evaluation: ```python main.py --config configs/largescale/<arch>-str.yaml --multigpu 0,1,2,3 --pretrained <STR-Model> --evaluate```
 
 ## Sparsity Budget Transfer
-If it is hard to hand-code all the budgets into a method like DNW, you can use the budget transfer functionalities of the repo. The pretrained models provided have to be in the native STR model format and not in coverted/compatible Dense model format. You should change [this piece](main.py#L312) of code to support Dense format as well.
+If it is hard to hand-code all the budgets into a method like DNW, you can use the budget transfer functionalities of the repo. The pre-trained models provided have to be in the native STR model format and not in a converted/compatible Dense model format. You should change [this piece](main.py#L312) of code to support the Dense format as well.
 
 Transfer to DNW: ```python main.py --config configs/largescale/<arch>-dnw.yaml --multigpu 0,1,2,3 --pretrained <STR-Model> --ignore-pretrained-weights --use-budget```
 
@@ -83,7 +83,7 @@ All the models provided here are trained on ImageNet-1K according to the setting
 
 ### Fully Dense Models:
 
-These models are straight-forward to train using this repo and thier pretrained models are in most of the popular frameworks.
+These models are straightforward to train using this repo and their pre-trained models are in most of the popular frameworks.
 
 | Architecture | Params | Sparsity (%) | Top-1 Acc (%) | FLOPs |
 | ------------ | :----: | :----------: | :-----------: | :---: |
@@ -92,7 +92,7 @@ These models are straight-forward to train using this repo and thier pretrained 
 
 ### STR Sparse Models:
 
-We are providing links to 6 models for ResNet50 and 2 models for MobileNetV1. These models represent the sparsity regime they belong to. Each model has two versions of model links to download, the first one is the vanilla STR model and the second one is the STR model converted to be compatible with Dense models and for tranfer learning. Please contact [Aditya Kusupati](https://homes.cs.washington.edu/~kusupati/) in case you need a specific model and are not able to train it from scratch. All the sparsity budgets for every model in the [paper](https://arxiv.org/abs/2002.03231) are present in the appendix, in case all you need is the non-uniform sparsity budget.
+We are providing links to 6 models for ResNet50 and 2 models for MobileNetV1. These models represent the sparsity regime they belong to. Each model has two versions of model links to download, the first one is the vanilla STR model and the second one is the STR model converted to be compatible with Dense models and for transfer learning. Please contact [Aditya Kusupati](https://homes.cs.washington.edu/~kusupati/) in case you need a specific model and are not able to train it from scratch. All the sparsity budgets for every model in the [paper](https://arxiv.org/abs/2002.03231) are present in the appendix, in case all you need is the non-uniform sparsity budget.
 
 #### ResNet50:
 | No. | Params | Sparsity (%) | Top-1 Acc (%) | FLOPs | Model Links |
@@ -110,7 +110,7 @@ We are providing links to 6 models for ResNet50 and 2 models for MobileNetV1. Th
 | 1   | 1.04M  | 75.28        | 68.35         | 101M  | [STR](https://drive.google.com/file/d/1XgBvMN2AzIoGSEYMfpoudHH3cLee-q-x/view?usp=sharing), [Dense](https://drive.google.com/file/d/19LWzHdUMpE5gm7tW9lIDs-T7rA3mcqFh/view?usp=sharing) |
 | 2   | 0.46M  | 89.01        | 62.10         | 42M  | [STR](https://drive.google.com/file/d/1_mNcVZTJB6LMfv5XrFUs2pWFMu9JQvG8/view?usp=sharing), [Dense](https://drive.google.com/file/d/1-PYY_uc-diqnfhMbZJNTYgqe95ouX7fp/view?usp=sharing) |
 
-Note: If you find any STR model to be 2x the size of its Dense compatible model, it might be becuase of an old implementation that might have resulted in a model which replicated the weights.
+Note: If you find any STR model to be 2x the size of its Dense compatible model, it might be because of an old implementation that might have resulted in a model that replicated the weights.
 
 ## Citation
 
