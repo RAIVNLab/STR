@@ -43,13 +43,6 @@ def train(train_loader, model, criterion, optimizer, epoch, args, writer):
 
         loss = criterion(output, target.view(-1))
 
-        if args.lambdas is not None:
-            for n, m in model.named_modules():
-                if hasattr(m, 'lambdas'):
-                    loss -= args.lambdas * m.lambdas()[0,0]
-
-
-
         # measure accuracy and record loss
         acc1, acc5 = accuracy(output, target, topk=(1, 5))
         losses.update(loss.item(), images.size(0))

@@ -232,13 +232,6 @@ def parse_arguments():
     )
 
     parser.add_argument(
-        "--lambdas",
-        type=float,
-        help="weight on loss",
-        default=None,
-    )
-
-    parser.add_argument(
         "--straight-through", action="store_true", help="strelu instead of relu"
     )
 
