@@ -232,10 +232,6 @@ def parse_arguments():
     )
 
     parser.add_argument(
-        "--straight-through", action="store_true", help="strelu instead of relu"
-    )
-
-    parser.add_argument(
         "--sparse-function", type=str, default='sigmoid', help="strelu instead of relu"
     )
 
