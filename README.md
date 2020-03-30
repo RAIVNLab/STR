@@ -100,7 +100,7 @@ We are providing links to 6 models for ResNet50 and 2 models for MobileNetV1. Th
 | 1   | 4.47M  | 81.27        | 76.12         | 705M  | [STR](https://drive.google.com/file/d/1ztb0UfsFVJQkE2vj6eNHxnab9MXuLryk/view?usp=sharing), [Dense](https://drive.google.com/file/d/1-M2AxzKdRp1pJWI4gAdN7v3a9Oih2MdG/view?usp=sharing) |
 | 2   | 2.49M  | 90.23        | 74.31         | 343M  | [STR](https://drive.google.com/file/d/19Aw8ovR52sMN9FQrSnd78WLLXeGrG67z/view?usp=sharing), [Dense](https://drive.google.com/file/d/1sya0OI1o53a64M0oXNhYRnkLGPhVRXaQ/view?usp=sharing) |
 | 3   | 1.24M  | 95.15        | 70.23         | 162M  | [STR](https://drive.google.com/file/d/1WTGNMQVQFBMigN8LH3NOc0QbWFnOMiPY/view?usp=sharing), [Dense](https://drive.google.com/file/d/17iKnZUl7bd4nBMjs2emhN4kTl1xEiUS9/view?usp=sharing) |
-| 4   | 0.88M  | 96.53        | 67.22         | 117M  | [STR](), [Dense]() |
+| 4   | 0.99M  | 96.11        | 67.78         | 127M  | [STR](https://drive.google.com/file/d/10-6GaZB5KA3wRilspcl674RR80zN2pFP/view?usp=sharing), [Dense](https://drive.google.com/file/d/1sBCgtY3zQRwE5436fhiG8jQz9ql8npFg/view?usp=sharing) |
 | 5   | 0.50M  | 98.05        | 61.46         | 73M   | [STR](https://drive.google.com/file/d/1wgdbeZgWWTN6baQvvmiwDf-6LVs8G7fH/view?usp=sharing), [Dense](https://drive.google.com/file/d/14R288bBVjamgW80qPy4i-tHXcfssqhnm/view?usp=sharing) |
 | 6   | 0.26M  | 98.98        | 51.82         | 47M   | [STR](https://drive.google.com/file/d/1MrGL0MtqmiWvZqqa02iDk2OqVKWNiRmM/view?usp=sharing), [Dense](https://drive.google.com/file/d/1jTsYTpQ4_cybbA0Z9h7yQ3SSLNaGj6BB/view?usp=sharing) |
 
