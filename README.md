@@ -1,5 +1,5 @@
 # [Soft Threshold Weight Reparameterization for Learnable Sparsity](https://arxiv.org/abs/2002.03231)
-[Aditya Kusupati](https://homes.cs.washington.edu/~kusupati/), [Vivek Ramanujan](https://vkramanuj.github.io/)*, [Raghav Somani](http://raghavsomani.github.io/)*, [Mitchell Worstsman](https://mitchellnw.github.io/)*, [Prateek Jain](prateekjain.org), [Sham Kakade](https://homes.cs.washington.edu/~sham/) and [Ali Farhadi](https://homes.cs.washington.edu/~ali/)
+[Aditya Kusupati](https://homes.cs.washington.edu/~kusupati/), [Vivek Ramanujan*](https://vkramanuj.github.io/), [Raghav Somani*](http://raghavsomani.github.io/), [Mitchell Worstsman*](https://mitchellnw.github.io/), [Prateek Jain](prateekjain.org), [Sham Kakade](https://homes.cs.washington.edu/~sham/) and [Ali Farhadi](https://homes.cs.washington.edu/~ali/)
 
 This repository contains code for the CNN experiments presented in the [paper](https://arxiv.org/abs/2002.03231) along with more functionalities.
 
