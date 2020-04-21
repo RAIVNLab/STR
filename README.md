@@ -113,6 +113,10 @@ We are providing links to 6 models for ResNet50 and 2 models for MobileNetV1. Th
 
 Note: If you find any STR model to be 2x the size of its Dense compatible model, it might be because of an old implementation that might have resulted in a model that replicated the weights.
 
+## Sparsity Budgets
+
+The folder [`budgets`](budgets) contains the csv files containing all the non-uniform sparsity budgets STR learnt for ResNet50 on ImageNet-1K across all the sparsity regimes along with baseline budgets for 90% sparse ResNet50 on ImageNet-1K. In case, you are not able to use the pretraining models to extract sparsity budgets, you can directly import the same budgets using these files.
+
 ## Citation
 
 If you find this project useful in your research, please consider citing:
