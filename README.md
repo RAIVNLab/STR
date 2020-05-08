@@ -89,7 +89,7 @@ These models are straightforward to train using this repo and their pre-trained 
 | Architecture | Params | Sparsity (%) | Top-1 Acc (%) | FLOPs | Model Links |
 | ------------ | :----: | :----------: | :-----------: | :---: | :---------: |
 | ResNet50     | 25.6M  | 0.00         | 77.01         | 4.09G |  [Dense](https://drive.google.com/file/d/13dEj0bSyisrYOhSsYf7mBqv_ixJlCYQa/view?usp=sharing) |
-| MobileNetV1  | 4.21M  | 0.00         | 70.60         | 569M  |             |
+| MobileNetV1  | 4.21M  | 0.00         | 70.60         | 569M  |     -       |
 
 ### STR Sparse Models:
 
