@@ -84,7 +84,7 @@ All the models provided here are trained on ImageNet-1K according to the setting
 
 ### Fully Dense Models:
 
-These models are straightforward to train using this repo and their pre-trained models are in most of the popular frameworks. For the sake of reproducibility, please find the ResNet50 Dense model. 
+These models are straightforward to train using this repo and their pre-trained models are in most of the popular frameworks. For the sake of reproducibility, pretrained ResNet50 Dense model is provided. 
 
 | Architecture | Params | Sparsity (%) | Top-1 Acc (%) | FLOPs | Model Links |
 | ------------ | :----: | :----------: | :-----------: | :---: | :---------: |
