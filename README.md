@@ -84,12 +84,12 @@ All the models provided here are trained on ImageNet-1K according to the setting
 
 ### Fully Dense Models:
 
-These models are straightforward to train using this repo and their pre-trained models are in most of the popular frameworks. For the sake of reproducibility, pretrained ResNet50 Dense model is provided. 
+These models are straightforward to train using this repo and their pre-trained models are in most of the popular frameworks. For the sake of reproducibility, pretrained dense models are provided. 
 
 | Architecture | Params | Sparsity (%) | Top-1 Acc (%) | FLOPs | Model Links |
 | ------------ | :----: | :----------: | :-----------: | :---: | :---------: |
 | ResNet50     | 25.6M  | 0.00         | 77.01         | 4.09G |  [Dense](https://drive.google.com/file/d/13dEj0bSyisrYOhSsYf7mBqv_ixJlCYQa/view?usp=sharing) |
-| MobileNetV1  | 4.21M  | 0.00         | 70.60         | 569M  |     -       |
+| MobileNetV1  | 4.21M  | 0.00         | 71.95         | 569M  |   [Dense](https://drive.google.com/file/d/1uk3OE6P5rvO2wd9Oc9_zCF7zz6VlIXew/view?usp=sharing) |
 
 ### STR Sparse Models:
 
