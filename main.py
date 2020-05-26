@@ -201,9 +201,9 @@ def main_worker(args):
                     sparsity, total_params, thresh = m.getSparsity()
                     writer.add_scalar("sparsity/{}".format(n), sparsity, epoch)
                     writer.add_scalar("thresh/{}".format(n), thresh, epoch)
-                    sum_sparse += int((sparsity / 100) * total_params)
+                    sum_sparse += int(((100 - sparsity) / 100) * total_params)
                     count += total_params
-            total_sparsity = 100 * sum_sparse / count
+            total_sparsity = 100 - (100 * sum_sparse / count)
             writer.add_scalar("sparsity/total", total_sparsity, epoch)
         writer.add_scalar("test/lr", cur_lr, epoch)
         end_epoch = time.time()
@@ -226,10 +226,10 @@ def main_worker(args):
             if isinstance(m, STRConv):
                 sparsity = m.getSparsity()
                 json_data[n] = sparsity[0]
-                sum_sparse += int((sparsity[0] / 100) * sparsity[1])
+                sum_sparse += int(((100 - sparsity[0]) / 100) * sparsity[1])
                 count += sparsity[1]
                 json_thres[n] = sparsity[2]
-        json_data["total"] = 100 * sum_sparse / count
+        json_data["total"] = 100 - (100 * sum_sparse / count)
         if not os.path.exists("runs/sparse_data"):
             os.mkdir("runs/sparse_data")
         if not os.path.exists("runs/sparse_thres"):
