@@ -73,7 +73,7 @@ def parse_arguments():
         "--init_prune_epoch", default=0, type=int, help="Init epoch for pruning in GMP"
     )
     parser.add_argument(
-        "--final_prune_epoch", default=100, type=int, help="Final epoch for pruning in GMP"
+        "--final_prune_epoch", default=-100, type=int, help="Final epoch for pruning in GMP"
     )
     parser.add_argument(
         "--momentum", default=0.9, type=float, metavar="M", help="momentum"
