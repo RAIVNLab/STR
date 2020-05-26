@@ -230,13 +230,13 @@ def main_worker(args):
                 count += sparsity[1]
                 json_thres[n] = sparsity[2]
         json_data["total"] = 100 - (100 * sum_sparse / count)
-        if not os.path.exists("runs/sparse_data"):
-            os.mkdir("runs/sparse_data")
-        if not os.path.exists("runs/sparse_thres"):
-            os.mkdir("runs/sparse_thres")
-        with open("runs/sparse_data/{}.json".format(args.name), "w") as f:
+        if not os.path.exists("runs/layerwise_sparsity"):
+            os.mkdir("runs/layerwise_sparsity")
+        if not os.path.exists("runs/layerwise_threshold"):
+            os.mkdir("runs/layerwise_threshold")
+        with open("runs/layerwise_sparsity/{}.json".format(args.name), "w") as f:
             json.dump(json_data, f)
-        with open("runs/sparse_thres/{}.json".format(args.name), "w") as f:
+        with open("runs/layerwise_threshold/{}.json".format(args.name), "w") as f:
             json.dump(json_thres, f)
 
 
