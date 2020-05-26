@@ -232,7 +232,7 @@ def parse_arguments():
     )
 
     parser.add_argument(
-        "--sparse-function", type=str, default='sigmoid', help="strelu instead of relu"
+        "--sparse-function", type=str, default='sigmoid', help="choice of g(s)"
     )
 
     parser.add_argument(
