@@ -13,7 +13,7 @@ The RNN experiments in the [paper](https://arxiv.org/abs/2002.03231) are done by
 2. Install requirements with `pip install -r requirements.txt` for `venv` and appropriate `conda` commands for `conda` environment.
 3. Create a **data directory** `<data-dir>`.
 To run the ImageNet experiments there must be a folder `<data-dir>/imagenet`
-that contains the ImageNet `train` and `val`.
+that contains the ImageNet `train` and `val` folders that contains images of each class in a seperate folder.
 
 ## STRConv
 [`STRConv`](utils/conv_type.py#L22) along with other custom convolution modules can be found in [`utils/conv_type.py`](utils/conv_type.py). Users can take `STRConv` and use it in most of the PyTorch based models as it inherits from `nn.Conv2d` or also mentioned here as [`DenseConv`](utils/conv_type.py#L12).
