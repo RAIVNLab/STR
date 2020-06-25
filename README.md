@@ -1,7 +1,7 @@
 # [Soft Threshold Weight Reparameterization for Learnable Sparsity](https://arxiv.org/abs/2002.03231)
-[Aditya Kusupati](https://homes.cs.washington.edu/~kusupati/), [Vivek Ramanujan*](https://vkramanuj.github.io/), [Raghav Somani*](http://raghavsomani.github.io/), [Mitchell Worstsman*](https://mitchellnw.github.io/), [Prateek Jain](prateekjain.org), [Sham Kakade](https://homes.cs.washington.edu/~sham/) and [Ali Farhadi](https://homes.cs.washington.edu/~ali/)
+[Aditya Kusupati](https://homes.cs.washington.edu/~kusupati/), [Vivek Ramanujan*](https://vkramanuj.github.io/), [Raghav Somani*](http://raghavsomani.github.io/), [Mitchell Worstsman*](https://mitchellnw.github.io/), [Prateek Jain](http://www.prateekjain.org/), [Sham Kakade](https://homes.cs.washington.edu/~sham/) and [Ali Farhadi](https://homes.cs.washington.edu/~ali/)
 
-This repository contains code for the CNN experiments presented in the [paper](https://arxiv.org/abs/2002.03231) along with more functionalities.
+This repository contains code for the CNN experiments presented in the ICML 2020 [paper](https://arxiv.org/abs/2002.03231) along with more functionalities.
 
 This code base is built upon the [hidden-networks repository](https://github.com/allenai/hidden-networks) modified for [STR](https://arxiv.org/abs/2002.03231), [DNW](https://arxiv.org/abs/1906.00586) and [GMP](https://arxiv.org/abs/1710.01878) experiments.
 
@@ -125,7 +125,8 @@ If you find this project useful in your research, please consider citing:
 @article{Kusupati20
   author    = {Kusupati, Aditya and Ramanujan, Vivek and Somani, Raghav and Wortsman, Mitchell and Jain, Prateek and Kakade, Sham and Farhadi, Ali},
   title     = {Soft Threshold Weight Reparameterization for Learnable Sparsity},
-  booktitle = {arXiv preprint arXiv:2002.03231},
+  booktitle = {Proceedings of the International Conference on Machine Learning},
+  month     = {July},
   year      = {2020},
 }
 ```
