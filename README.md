@@ -122,7 +122,7 @@ The folder [`budgets`](budgets) contains the csv files containing all the non-un
 If you find this project useful in your research, please consider citing:
 
 ```
-@article{Kusupati20
+@inproceedings{Kusupati20
   author    = {Kusupati, Aditya and Ramanujan, Vivek and Somani, Raghav and Wortsman, Mitchell and Jain, Prateek and Kakade, Sham and Farhadi, Ali},
   title     = {Soft Threshold Weight Reparameterization for Learnable Sparsity},
   booktitle = {Proceedings of the International Conference on Machine Learning},
