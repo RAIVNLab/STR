@@ -137,7 +137,7 @@ def main_worker(args):
             total_prune_epochs = args.final_prune_epoch - args.init_prune_epoch + 1
             for n, m in model.named_modules():
                 if hasattr(m, 'set_curr_prune_rate'):
-                    prune_decay = (1 - ((args.curr_prune_epoch - args.init_prune_epoch)/total_prune_epochs))**3
+                    prune_decay = (1 - ((epoch - args.init_prune_epoch)/total_prune_epochs))**3
                     curr_prune_rate = m.prune_rate - (m.prune_rate*prune_decay)
                     m.set_curr_prune_rate(curr_prune_rate)
 
