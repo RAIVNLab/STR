@@ -20,6 +20,24 @@ def parse_arguments():
         "-a", "--arch", metavar="ARCH", default="ResNet18", help="model architecture"
     )
     parser.add_argument(
+        "--num-train-examples",
+        type=int,
+        default=None,
+        help="Number of train examples to use for MultiMNIST",
+    )
+    parser.add_argument(
+        "--num-val-examples",
+        type=int,
+        default=None,
+        help="Number of val examples to use for MultiMNIST",
+    )
+    parser.add_argument(
+        "--num-concat",
+        help="Number of digits to concat MultiMNIST dataset",
+        type=int,
+        default=None,
+    )
+    parser.add_argument(
         "--config", help="Config file to use (see configs dir)", default=None
     )
     parser.add_argument(
@@ -244,7 +262,8 @@ def parse_arguments():
 
     args = parser.parse_args()
 
-    get_config(args)
+    if args.config is not None:
+        get_config(args)
 
     return args
 
